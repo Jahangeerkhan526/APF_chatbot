@@ -74,33 +74,54 @@ ACTIVITY_MAP = {
 # Maps keywords found in page content → section name + label
 
 SECTION_RULES = [
-    # (keywords_to_check, section_name, section_label)
-    # Order matters — more specific first
-    (["ABOUT THIS ACTIVITY"],                    "about_activity",   "About This Activity"),
-    (["TOP TIPS"],                                "top_tips",         "Top Tips"),
-    (["AFTER CHILDBIRTH"],                        "after_childbirth", "After Childbirth"),
-    (["GENERAL\nADVICE", "GENERAL ADVICE",
-      "KEEP GOING", "STOP & SEEK ADVICE",
-      "Chief Medical Officers"],                  "general_advice",   "General Advice"),
-    (["ACKNOWLEDGEMENTS", "DISCLAIMER",
-      "CONNECT WITH US", "www.activepregnancy"], "acknowledgements", "Acknowledgements"),
-    (["DO'S", "DON'T", "DON\u2019T",
-      "DONTS", "Avoid ", "Don't "],              "dos_and_donts",    "Do's and Don'ts"),
-    (["Not active?", "Already active?",
-      "Start gradually", "Keep going"],          "activity_intro",   "Activity Introduction"),
+    # Order matters — most specific FIRST
+    ("ABOUT THIS ACTIVITY",          "about_activity",    "About This Activity"),
+    ("TOP TIPS",                     "top_tips",          "Top Tips"),
+    ("AFTER CHILDBIRTH",             "after_childbirth",  "After Childbirth"),
+    ("ACKNOWLEDGEMENTS",             "acknowledgements",  "Acknowledgements"),
+    ("DISCLAIMER",                   "acknowledgements",  "Acknowledgements"),
+    ("Version: Cycling",             "acknowledgements",  "Acknowledgements"),
+    ("Version: Dancing",             "acknowledgements",  "Acknowledgements"),
+    ("Version: Walking",             "acknowledgements",  "Acknowledgements"),
+    ("Version: Running",             "acknowledgements",  "Acknowledgements"),
+    ("Version: Swimming",            "acknowledgements",  "Acknowledgements"),
+    ("Version: Yoga",                "acknowledgements",  "Acknowledgements"),
+    ("Version: Pilates",             "acknowledgements",  "Acknowledgements"),
+    ("Version: Home Workouts",       "acknowledgements",  "Acknowledgements"),
+    ("Version: Aquanatal",           "acknowledgements",  "Acknowledgements"),
+    ("Version: Resistance",          "acknowledgements",  "Acknowledgements"),
+    ("Version: Personal",            "acknowledgements",  "Acknowledgements"),
+    ("OUR VISION",                   "organisation_info", "Organisation Info"),
+    ("OUR PRIORITIES",               "organisation_info", "Organisation Info"),
+    ("OUR BIG PUSH",                 "organisation_info", "Organisation Info"),
+    ("ENDORSEMENT PROCESS",          "organisation_info", "Organisation Info"),
+    ("WHY GET ENDORSED",             "organisation_info", "Organisation Info"),
+    ("ABOUT ENDORSEMENT",            "organisation_info", "Organisation Info"),
+    ("KEY REQUIREMENTS",             "organisation_info", "Organisation Info"),
+    ("EXPERIENCING THE BENEFITS",    "organisation_info", "Organisation Info"),
+    ("THREE WAYS TO ENGAGE",         "organisation_info", "Organisation Info"),
+    ("KEEP GOING",                   "general_advice",    "General Advice"),
+    ("STOP & SEEK ADVICE",           "general_advice",    "General Advice"),
+    ("Chief Medical Officers",       "general_advice",    "General Advice"),
+    ("DO's",                        "dos_and_donts",     "Do's and Don'ts"),
+    ("DON'Ts",                      "dos_and_donts",     "Do's and Don'ts"),
 ]
+
 
 def detect_section(content: str) -> tuple:
     """
     Auto-detect section name and label from page content.
     Returns (section_name, section_label)
+    Each rule is (keyword, section_name, section_label).
+    Checks exact match first, then case-insensitive.
     """
-    content_upper = content.upper()
+    for keyword, section_name, section_label in SECTION_RULES:
+        if keyword in content or keyword.upper() in content.upper():
+            return section_name, section_label
 
-    for keywords, section_name, section_label in SECTION_RULES:
-        for kw in keywords:
-            if kw.upper() in content_upper or kw in content:
-                return section_name, section_label
+    # Fallback: pages with activity callout bubbles = about_activity
+    if ("Not active?" in content or "Already active?" in content) and        ("AFTER CHILDBIRTH" not in content) and        ("KEEP GOING" not in content):
+        return "about_activity", "About This Activity"
 
     return "general_content", "General Content"
 
@@ -201,6 +222,22 @@ def process_file(input_path: str) -> list:
     for page_num, content in pages:
         section_name, section_label = detect_section(content)
         word_count = len(content.split())
+
+        # Clean bullet point characters
+        content = content.replace("\u0007", "")
+        content = content.replace("\x07", "")
+        # Clean other control characters
+        import re as _re
+        content = _re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", content)
+        # Clean up multiple blank lines left after bullet removal
+        content = _re.sub(r"\n{3,}", "\n\n", content).strip()
+
+        # Clean bullet/control characters
+        import re as _re
+        content = content.replace("\u0007", "- ")
+        content = content.replace("\x07", "- ")
+        content = _re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", content)
+        content = _re.sub(r"\n{3,}", "\n\n", content).strip()
 
         doc = {
             "id"           : f"{filename}_page_{page_num}",
