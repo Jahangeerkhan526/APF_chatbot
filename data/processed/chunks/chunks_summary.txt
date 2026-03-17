@@ -1,0 +1,33 @@
+APF RAG CHUNKS SUMMARY
+==================================================
+Total pages processed : 84
+Pages skipped         : 11 (acknowledgements)
+Total chunks created  : 145
+Average chunk size    : 124 words
+Min chunk size        : 42 words
+Max chunk size        : 150 words
+
+Chunks by section:
+  about_activity            : 11
+  after_childbirth          : 48
+  dos_and_donts             : 2
+  general_advice            : 13
+  general_content           : 54
+  organisation_info         : 12
+  top_tips                  : 5
+
+Chunks by activity:
+  aquanatal                 : 10
+  cycling                   : 15
+  dancing                   : 11
+  general                   : 17
+  home_workouts             : 11
+  personal_training         : 10
+  pilates                   : 10
+  postnatal                 : 4
+  pregnancy                 : 3
+  resistance_training       : 11
+  running                   : 9
+  swimming                  : 13
+  walking                   : 11
+  yoga                      : 10
