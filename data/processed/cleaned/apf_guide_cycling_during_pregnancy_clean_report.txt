@@ -1,0 +1,17 @@
+CLEAN REPORT: apf_guide_cycling_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      10             0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         245            245
+4      KEPT         243            243
+5      KEPT         170            170
+6      KEPT         326            326
+7      KEPT         325            325
+8      KEPT         307            291  (-16 noise)
+9      KEPT         146            145  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 7
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_cycling_during_pregnancy.txt

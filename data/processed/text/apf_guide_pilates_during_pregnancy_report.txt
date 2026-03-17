@@ -1,0 +1,15 @@
+EXTRACTION REPORT: apf_guide_pilates_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      8              0              YES            13
+2      96             0              no             96
+3      176            0              no             176
+4      197            0              no             197
+5      140            0              no             140
+6      273            0              no             273
+7      263            50             no             313
+8      155            0              no             155
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_pilates_during_pregnancy.txt

@@ -1,0 +1,16 @@
+CLEAN REPORT: apf_guide_Aquantal_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      12             0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         198            198
+4      KEPT         187            186  (-1 noise)
+5      KEPT         124            124
+6      KEPT         233            233
+7      KEPT         313            297  (-16 noise)
+8      KEPT         149            148  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_Aquantal_during_pregnancy.txt

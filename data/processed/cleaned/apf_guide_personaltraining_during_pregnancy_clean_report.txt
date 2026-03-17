@@ -1,0 +1,16 @@
+CLEAN REPORT: apf_guide_personaltraining_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      9              0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         183            183
+4      KEPT         252            252
+5      KEPT         111            110  (-1 noise)
+6      KEPT         216            216
+7      KEPT         307            291  (-16 noise)
+8      KEPT         149            148  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_personaltraining_during_pregnancy.txt

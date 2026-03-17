@@ -1,0 +1,16 @@
+CLEAN REPORT: apf_guide_walking_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      8              0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         266            266
+4      KEPT         258            258
+5      KEPT         185            185
+6      KEPT         239            239
+7      KEPT         307            291  (-16 noise)
+8      KEPT         145            144  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_walking_during_pregnancy.txt

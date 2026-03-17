@@ -1,0 +1,13 @@
+CLEAN REPORT: APF-Our-Big-Push-2026
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      35             0  (cover page)
+2      KEPT         253            253
+3      KEPT         186            186
+4      KEPT         268            267  (-1 noise)
+5      KEPT         135            135
+------------------------------------------------------------
+Pages kept   : 4
+Pages skipped: 1 [1]
+Output       : data/processed/cleaned\APF-Our-Big-Push-2026.txt

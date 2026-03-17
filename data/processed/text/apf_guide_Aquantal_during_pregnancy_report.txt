@@ -1,0 +1,15 @@
+EXTRACTION REPORT: apf_guide_Aquantal_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      8              0              YES            12
+2      96             0              no             96
+3      191            7              no             198
+4      187            0              no             187
+5      124            0              no             124
+6      233            0              no             233
+7      263            50             no             313
+8      149            0              no             149
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_Aquantal_during_pregnancy.txt

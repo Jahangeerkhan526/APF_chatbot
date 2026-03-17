@@ -1,0 +1,11 @@
+EXTRACTION REPORT: thismummoves-pregnancy-leaflet
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      76             0              no             76
+2      115            15             no             130
+3      115            29             no             144
+4      78             0              no             78
+-----------------------------------------------------------------
+
+Output: data/processed/text\thismummoves-pregnancy-leaflet.txt

@@ -1,0 +1,12 @@
+CLEAN REPORT: thismummoves-postnatal-leaflet
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      64             0  (cover page)
+2      KEPT         149            149
+3      KEPT         266            264  (-2 noise)
+4      KEPT         137            137
+------------------------------------------------------------
+Pages kept   : 3
+Pages skipped: 1 [1]
+Output       : data/processed/cleaned\thismummoves-postnatal-leaflet.txt

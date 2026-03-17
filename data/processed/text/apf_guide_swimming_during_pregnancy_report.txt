@@ -1,0 +1,16 @@
+EXTRACTION REPORT: apf_guide_swimming_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      8              0              YES            13
+2      96             0              no             96
+3      218            6              no             224
+4      196            0              no             196
+5      170            0              no             170
+6      234            0              no             234
+7      231            0              no             231
+8      257            50             no             307
+9      141            0              no             141
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_swimming_during_pregnancy.txt

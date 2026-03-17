@@ -1,0 +1,16 @@
+CLEAN REPORT: apf_guide_homeworkout_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      9              0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         217            217
+4      KEPT         224            224
+5      KEPT         166            166
+6      KEPT         213            213
+7      KEPT         313            297  (-16 noise)
+8      KEPT         156            155  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_homeworkout_during_pregnancy.txt

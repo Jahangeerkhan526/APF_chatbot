@@ -1,0 +1,15 @@
+EXTRACTION REPORT: apf_guide_personaltraining_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      9              0              no             9
+2      96             0              no             96
+3      174            9              no             183
+4      252            0              no             252
+5      111            0              no             111
+6      209            7              no             216
+7      257            50             no             307
+8      149            0              no             149
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_personaltraining_during_pregnancy.txt

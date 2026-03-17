@@ -1,0 +1,16 @@
+CLEAN REPORT: apf_guide_resistancetraining_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      9              0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         282            282
+4      KEPT         241            241
+5      KEPT         147            147
+6      KEPT         209            209
+7      KEPT         313            297  (-16 noise)
+8      KEPT         152            151  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_resistancetraining_during_pregnancy.txt

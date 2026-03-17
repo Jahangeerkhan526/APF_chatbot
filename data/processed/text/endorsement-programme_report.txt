@@ -1,0 +1,14 @@
+EXTRACTION REPORT: endorsement-programme
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      0              13             no             13
+2      0              256            no             256
+3      0              225            no             225
+4      0              208            no             208
+5      0              146            no             146
+6      0              198            no             198
+7      0              124            no             124
+-----------------------------------------------------------------
+
+Output: data/processed/text\endorsement-programme.txt

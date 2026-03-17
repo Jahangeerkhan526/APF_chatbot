@@ -1,0 +1,15 @@
+EXTRACTION REPORT: apf_guide_running_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      8              0              no             8
+2      96             0              no             96
+3      188            0              no             188
+4      159            0              no             159
+5      141            6              no             147
+6      266            0              no             266
+7      257            50             no             307
+8      148            0              no             148
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_running_during_pregnancy.txt

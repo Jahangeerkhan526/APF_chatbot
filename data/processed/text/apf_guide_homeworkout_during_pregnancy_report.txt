@@ -1,0 +1,15 @@
+EXTRACTION REPORT: apf_guide_homeworkout_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      9              0              no             9
+2      96             0              no             96
+3      217            0              no             217
+4      224            0              no             224
+5      157            9              no             166
+6      213            0              no             213
+7      263            50             no             313
+8      156            0              no             156
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_homeworkout_during_pregnancy.txt

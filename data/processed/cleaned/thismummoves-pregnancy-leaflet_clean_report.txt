@@ -1,0 +1,12 @@
+CLEAN REPORT: thismummoves-pregnancy-leaflet
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      76             0  (cover page)
+2      KEPT         130            130
+3      KEPT         144            144
+4      KEPT         78             78
+------------------------------------------------------------
+Pages kept   : 3
+Pages skipped: 1 [1]
+Output       : data/processed/cleaned\thismummoves-pregnancy-leaflet.txt

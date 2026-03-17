@@ -1,0 +1,16 @@
+CLEAN REPORT: apf_guide_pilates_during_pregnancy
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      13             0  (cover page)
+2      SKIPPED      96             0  (series list)
+3      KEPT         176            176
+4      KEPT         197            197
+5      KEPT         140            139  (-1 noise)
+6      KEPT         273            273
+7      KEPT         313            297  (-16 noise)
+8      KEPT         155            154  (-1 noise)
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 2 [1, 2]
+Output       : data/processed/cleaned\apf_guide_pilates_during_pregnancy.txt

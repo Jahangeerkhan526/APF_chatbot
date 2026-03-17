@@ -1,0 +1,11 @@
+EXTRACTION REPORT: thismummoves-postnatal-leaflet
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      64             0              no             64
+2      139            10             no             149
+3      226            40             no             266
+4      137            0              no             137
+-----------------------------------------------------------------
+
+Output: data/processed/text\thismummoves-postnatal-leaflet.txt

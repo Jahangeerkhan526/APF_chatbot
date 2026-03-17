@@ -1,0 +1,15 @@
+EXTRACTION REPORT: apf_guide_dancing_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      8              0              no             8
+2      96             0              no             96
+3      234            0              no             234
+4      288            0              no             288
+5      112            0              no             112
+6      268            0              no             268
+7      263            50             no             313
+8      149            0              no             149
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_dancing_during_pregnancy.txt

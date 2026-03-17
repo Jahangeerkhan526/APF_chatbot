@@ -1,0 +1,15 @@
+CLEAN REPORT: endorsement-programme
+============================================================
+Page   Action       Words Before   Words After
+------------------------------------------------------------
+1      SKIPPED      13             0  (cover page)
+2      KEPT         256            255  (-1 noise)
+3      KEPT         225            225
+4      KEPT         208            208
+5      KEPT         146            146
+6      KEPT         198            198
+7      KEPT         124            124
+------------------------------------------------------------
+Pages kept   : 6
+Pages skipped: 1 [1]
+Output       : data/processed/cleaned\endorsement-programme.txt

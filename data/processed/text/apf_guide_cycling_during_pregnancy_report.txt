@@ -1,0 +1,16 @@
+EXTRACTION REPORT: apf_guide_cycling_during_pregnancy
+=================================================================
+Page   Text Words     Image Words    OCR Fallback   Total
+-----------------------------------------------------------------
+1      8              0              YES            10
+2      96             0              no             96
+3      245            0              no             245
+4      243            0              no             243
+5      170            0              no             170
+6      326            0              no             326
+7      325            0              no             325
+8      257            50             no             307
+9      146            0              no             146
+-----------------------------------------------------------------
+
+Output: data/processed/text\apf_guide_cycling_during_pregnancy.txt
