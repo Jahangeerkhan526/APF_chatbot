@@ -1,0 +1,168 @@
+# -*- coding: utf-8 -*-
+"""
+embed_faqs.py
+=============
+APF Nancy Chatbot - Embed FAQ JSON into ChromaDB
+
+What it does:
+  - Reads data/processed/faqs/faqs.json
+  - Embeds each Q&A pair using sentence-transformers
+  - Adds to existing ChromaDB collection (apf_knowledge)
+  - Skips duplicates automatically
+
+Usage:
+    python scripts/embed_faqs.py
+
+Input:  data/processed/faqs/faqs.json
+Output: data/vectordb/chroma/ (ChromaDB collection)
+"""
+
+import json
+import time
+from pathlib import Path
+from sentence_transformers import SentenceTransformer
+import chromadb
+
+# ── CONFIG ────────────────────────────────────────────────────────────────────
+FAQS_JSON    = "data/processed/faqs/faqs.json"
+VECTORDB_DIR = "data/vectordb/chroma"
+COLLECTION   = "apf_knowledge"
+EMBED_MODEL  = "all-MiniLM-L6-v2"
+BATCH_SIZE   = 32
+
+# ── MAIN ──────────────────────────────────────────────────────────────────────
+
+def main():
+    print("\n" + "="*60)
+    print("  APF FAQ Embedder → ChromaDB")
+    print("="*60)
+    print(f"  Input : {FAQS_JSON}")
+    print(f"  DB    : {VECTORDB_DIR}")
+
+    # Check input file
+    if not Path(FAQS_JSON).exists():
+        print(f"\n[ERROR] {FAQS_JSON} not found!")
+        print(f"  Run first: python scripts/faq_to_json.py")
+        return
+
+    # Load FAQ JSON
+    with open(FAQS_JSON, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    faqs = data["faqs"]
+    meta = data["metadata"]
+
+    print(f"\n  Total FAQs loaded : {meta['total_faqs']}")
+    print(f"  Created at        : {meta['created_at']}")
+
+    # Load embedding model
+    print(f"\n  Loading embedding model: {EMBED_MODEL}...")
+    t0    = time.time()
+    model = SentenceTransformer(EMBED_MODEL)
+    print(f"  Model loaded in {time.time()-t0:.1f}s")
+
+    # Connect to ChromaDB
+    print(f"\n  Connecting to ChromaDB...")
+    client     = chromadb.PersistentClient(path=VECTORDB_DIR)
+    collection = client.get_collection(COLLECTION)
+    before     = collection.count()
+    print(f"  Existing chunks: {before}")
+
+    # Check which FAQs already exist
+    print(f"\n  Checking for duplicates...")
+    new_faqs = []
+    for faq in faqs:
+        try:
+            existing = collection.get(ids=[faq["id"]])
+            if not existing["ids"]:
+                new_faqs.append(faq)
+        except:
+            new_faqs.append(faq)
+
+    skipped = len(faqs) - len(new_faqs)
+    print(f"  Already in DB : {skipped}")
+    print(f"  To add        : {len(new_faqs)}")
+
+    if not new_faqs:
+        print(f"\n  ✅ Nothing to add — all FAQs already in ChromaDB!")
+        return
+
+    # Embed and store in batches
+    print(f"\n  Embedding and storing in batches of {BATCH_SIZE}...")
+    print(f"\n  {'Category':<20} {'Section':<30} {'Added':>6}")
+    print(f"  {'-'*58}")
+
+    total_added = 0
+    category_counts = {}
+
+    for i in range(0, len(new_faqs), BATCH_SIZE):
+        batch = new_faqs[i:i + BATCH_SIZE]
+
+        ids        = [f["id"] for f in batch]
+        texts      = [f["combined"] for f in batch]
+        embeddings = model.encode(texts, show_progress_bar=False).tolist()
+
+        metadatas = [{
+            "source_file"  : f["source_file"],
+            "category"     : f["category"],
+            "section_label": f["section_label"],
+            "source_type"  : "faq",
+            "question"     : f["question"],
+            "word_count"   : str(f["word_count"]),
+            "q_number"     : str(f["q_number"]),
+        } for f in batch]
+
+        collection.add(
+            ids        = ids,
+            embeddings = embeddings,
+            documents  = texts,
+            metadatas  = metadatas,
+        )
+
+        # Track counts per category
+        for f in batch:
+            key = f"{f['category']} | {f['section_label']}"
+            category_counts[key] = category_counts.get(key, 0) + 1
+
+        total_added += len(batch)
+        print(f"  Batch {i//BATCH_SIZE + 1}: {len(batch)} FAQs embedded ✅")
+
+    # Print summary by category
+    print(f"\n  Summary by category:")
+    print(f"  {'─'*58}")
+    for key, count in sorted(category_counts.items()):
+        cat, section = key.split(" | ")
+        print(f"  {cat:<20} {section:<30} {count:>6}")
+
+    # Final count
+    after = collection.count()
+    print(f"\n{'='*60}")
+    print(f"  ✅ EMBEDDING COMPLETE!")
+    print(f"{'='*60}")
+    print(f"  FAQs added      : {total_added}")
+    print(f"  ChromaDB before : {before}")
+    print(f"  ChromaDB after  : {after}")
+
+    # Test query
+    print(f"\n  Test query: 'is it safe to exercise during pregnancy?'")
+    test_emb = model.encode(["is it safe to exercise during pregnancy?"])
+    results  = collection.query(
+        query_embeddings = test_emb.tolist(),
+        n_results        = 3,
+        include          = ["documents", "metadatas", "distances"]
+    )
+    for i, (doc, meta, dist) in enumerate(zip(
+        results["documents"][0],
+        results["metadatas"][0],
+        results["distances"][0]
+    )):
+        score = round(1 - dist, 3)
+        print(f"\n  [{i+1}] Score: {score} | {meta['category']} | {meta['section_label']}")
+        print(f"       {doc[:100]}...")
+
+    print(f"\n  Nancy now knows about FAQs! ")
+    print(f"  Next step → run: python backend/main.py")
+
+
+if __name__ == "__main__":
+    main()

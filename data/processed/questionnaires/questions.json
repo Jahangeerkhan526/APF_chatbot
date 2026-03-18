@@ -1,0 +1,408 @@
+{
+  "metadata": {
+    "created_at": "2026-03-18T15:27:39.246212",
+    "total_gaqp": 15,
+    "total_gaqpp": 16,
+    "total_pelvic": 7,
+    "source_gaqp": "CSEP-PATH_GAQ_P_UK_version.pdf",
+    "source_gaqpp": "CSEP-PATH_GAQ_PP_Guidelines.pdf",
+    "source_pelvic": "Marlize email APF recommendation",
+    "note": "Original questions only. LLM rephrases warmly at runtime."
+  },
+  "gaqp_questions": [
+    {
+      "question_id": "gaqp_1a",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1a",
+      "question_original": "\u0007Mild, moderate or severe respiratory or cardiovascular diseases (e.g., chronic bronchitis)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1b",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1b",
+      "question_original": "\u0007Epilepsy that is not stable?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1c",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1c",
+      "question_original": "\u0007Type 1 diabetes that is not stable or your blood sugar is outside of target ranges?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1d",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1d",
+      "question_original": "\u0007Thyroid disease that is not stable or your thyroid function is outside of target ranges?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1e",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1e",
+      "question_original": "\u0007An eating disorder(s) or malnutrition?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1f",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1f",
+      "question_original": "\u0007Twins (28 weeks pregnant or later)? Or are you expecting triplets or higher multiple births?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1g",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1g",
+      "question_original": "\u0007Low red blood cell number (anemia) with high levels of fatigue and/or light-headedness?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1h",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1h",
+      "question_original": "\u0007High blood pressure (preeclampsia, gestational hypertension, or chronic hypertension that is not stable)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1i",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1i",
+      "question_original": "\u0007A baby that is growing slowly (intrauterine growth restriction)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1j",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1j",
+      "question_original": "Unexplained bleeding, ruptured membranes or labour before 37 weeks?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1k",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1k",
+      "question_original": "\u0007A placenta that is partially or completely covering the cervix (placenta previa)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1l",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1l",
+      "question_original": "\u0007Weak cervical tissue (incompetent cervix)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1m",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1m",
+      "question_original": "\u0007A stitch or tape to reinforce your cervix (cerclage)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1a",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1a",
+      "question_original": "\u0007Recurrent miscarriages (loss of your baby before 20 weeks gestation two or more times)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqp_1b",
+      "questionnaire": "GAQ-P",
+      "for": "pregnancy",
+      "section": "main",
+      "question_number": "1b",
+      "question_original": "Early delivery (before 37 weeks gestation)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    }
+  ],
+  "gaqpp_questions": [
+    {
+      "question_id": "gaqpp_1a",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1a",
+      "question_original": "\u0007Loss of consciousness for any reason?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1b",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1b",
+      "question_original": "\u0007Neurological symptoms such as poor coordination or muscle weakness affecting balance?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1c",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1c",
+      "question_original": "\u0007Deep vein thrombosis (blood clot in legs; can cause leg pain and swelling, or red/warm skin around",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1d",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1d",
+      "question_original": "\u0007High blood pressure (>140/90mmHg) that is not stable?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1e",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1e",
+      "question_original": "\u0007An eating disorder(s) or malnutrition?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1f",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1f",
+      "question_original": "\u0007Postpartum cardiomyopathy (heart disease after childbirth)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1g",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1g",
+      "question_original": "\u0007New symptoms of heart disease (e.g., chest pain or discomfort) or stroke (e.g., face drooping, slurred",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1h",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1h",
+      "question_original": "\u0007Severe abdominal pain?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1i",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1i",
+      "question_original": "\u0007Chest pain/discomfort, dizziness or lightheadedness during exercise?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1j",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1j",
+      "question_original": "Breathing difficulties such as shortness of breath at rest that does not improve with medications?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1k",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1k",
+      "question_original": "\u0007Kidney disease?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1l",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1l",
+      "question_original": "\u0007Excessive fatigue (e.g., beyond tiredness, does not improve with rest)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1m",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1m",
+      "question_original": "\u0007Severe infection accompanied by fever, body aches, or swollen lymph glands?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1n",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1n",
+      "question_original": "\u0007Broken bone(s) or another significant injury?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1o",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1o",
+      "question_original": "\u0007Caesarean section pain that worsens with exercise (e.g., surgical incision pain)?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    },
+    {
+      "question_id": "gaqpp_1p",
+      "questionnaire": "GAQ-PP",
+      "for": "postnatal",
+      "section": "main",
+      "question_number": "1p",
+      "question_original": "Vaginal bleeding not associated with menses?",
+      "answer_type": "yes_no",
+      "if_yes": "refer_to_gp",
+      "source_type": "screening_question"
+    }
+  ],
+  "pelvic_symptoms": [
+    {
+      "symptom_id": "pelvic_1",
+      "for": "postnatal",
+      "original": "Urinary and/or faecal incontinence",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    },
+    {
+      "symptom_id": "pelvic_2",
+      "for": "postnatal",
+      "original": "Urinary and/or faecal urgency that is difficult to defer",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    },
+    {
+      "symptom_id": "pelvic_3",
+      "for": "postnatal",
+      "original": "Heaviness/pressure/bulge/dragging in the pelvic area",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    },
+    {
+      "symptom_id": "pelvic_4",
+      "for": "postnatal",
+      "original": "Pain with intercourse",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    },
+    {
+      "symptom_id": "pelvic_5",
+      "for": "postnatal",
+      "original": "Obstructive defecation",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    },
+    {
+      "symptom_id": "pelvic_6",
+      "for": "postnatal",
+      "original": "Pendular abdomen, separated abdominal muscles and/or decreased abdominal strength and function",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    },
+    {
+      "symptom_id": "pelvic_7",
+      "for": "postnatal",
+      "original": "Musculoskeletal lumbopelvic pain",
+      "action": "refer_to_pelvic_physio",
+      "signpost": "thepogp.co.uk/resources/booklets"
+    }
+  ]
+}
